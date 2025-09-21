@@ -46,5 +46,5 @@ jobs:
         if: always()
         run: |
           git add posted.json || true
-          git commit -m "Update posted.json from workflow" --author="github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com" || echo "No changes to commit"
+          git commit -m "Update posted.json from workflow" || echo "No changes to commit"
           git push || echo "Push failed"
