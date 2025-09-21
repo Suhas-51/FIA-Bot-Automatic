@@ -12,7 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 from PyPDF2 import PdfReader
 from pdf2image import convert_from_path
-from instagrapi import Client
+from instagrapi import Cl
 
 # CONFIG (read from env)
 FIA_INDEX_URL = "https://www.fia.com/documents/championships/fia-formula-one-world-championship-14/"
@@ -151,9 +151,10 @@ def get_http_last_modified(url):
 def instagram_upload(image_path, caption):
     if not INSTAGRAM_USERNAME or not INSTAGRAM_PASSWORD:
         raise RuntimeError("Instagram credentials not set in environment")
-    client = Client()
-    client.login(INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD)
-    media = client.photo_upload(image_path, caption)
+    cl = cl()
+    cl.load_settings("session.json")
+    cl.login(user, pass)
+    media = cl.photo_upload(image_path, caption)
     logger.info("Uploaded %s", getattr(media, 'pk', 'unknown'))
     return media
 
