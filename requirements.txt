@@ -1,5 +1,4 @@
 requests
 beautifulsoup4
-pdf2image
-pillow
-instagrapi
+lxml
+PyMuPDF
