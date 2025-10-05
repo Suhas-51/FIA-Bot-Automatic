@@ -1,4 +1,0 @@
-from instagrapi import Client
-cl = Client()
-cl.login("fia.f1.docs", "Verisk@11")
-cl.dump_settings("session.json")
