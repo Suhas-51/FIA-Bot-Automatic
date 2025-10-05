@@ -5,8 +5,8 @@ from pdf2image import convert_from_path
 from instagrapi import Client
 import tempfile
 
-INSTAGRAM_USER = os.getenv("IG_USERNAME")
-INSTAGRAM_PASS = os.getenv("IG_PASSWORD")
+INSTAGRAM_USER = "fia.f1.docs"
+INSTAGRAM_PASS = "Verisk@11"
 DOCS_URL = "https://www.fia.com/documents/championships/fia-formula-one-world-championship-14/season/season-2025-2071"
 
 def get_docs():
@@ -63,3 +63,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
